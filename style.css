@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+* {
+    margin: 0;      /* 마진값 초기화 */
+    padding: 0;     /* 패딩값 초기화 */
+    box-sizing: border-box;         /* 박스영역은 테리지 지정 */
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style:none;
+}
+
+
+body {
+    background-color: #f8f7f8;
+}
+
+#container {
+    margin: 0 auto;     /* 화면 중앙에 배치 */  
+    width: 100%;      /* 너비 지정 */
+
+}
+
+/* 헤더 영역 */
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #bbd8db;
+}
+
+
+/* 로고 영역 */
+
+#logo {
+       width: 250px;
+    height: 70px;
+    line-height:70px;
+    padding-left:20px;
+}
+#logo h1 {
+    font-family: 'Oleo Script Swash Caps', cursive;;
+    font-weight: 300;
+    font-size:35px;
+    color:#fcfbfc;
+    text-shadow: 0 -3px #bbb;
+
+}
+
+
+/* 글자 우측 커서 효과 삽입 */
+.wrapper {
+    height: 250px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    color: rgb(84, 83, 83);
+    width: 30ch;
+    animation: typing 6s steps(40) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black;
+    font-family: monospace;
+    font-size: 4em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+/* 이미지 슬라이드 쇼 영역 */
+#slideShow {
+    clear: both;        /* 플로팅 해제 */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+/* 박스 영역 */
+#tab_list {
+    margin-top: 210px; 
+    margin-bottom: 10px; 
+    text-align: center;
+
+}
+
+.tab-cata  {
+
+     color: rgb(84, 83, 83);
+     display:inline-block;
+     border-radius: 10px;
+     padding:20px 20px; 
+    margin:20px 30px;
+    background: #bbd8db ;
+    font-size:30px;
+    transition: all 0.3s cubic-bezier(0.42,0.0,0.58,1.0);
+
+}
+
+
+.tab-cata > div {
+    color: rgb(84, 83, 83);
+    background: #fcfbfc ;
+    border-radius: 10px;     
+    padding:100px 60px; 
+
+    cursor: pointer;
+    font-size:30px;
+    transition: all 0.2s ease-in-out;
+    }
+    .tab-cata:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+    }
+    @keyframes swing {
+    15% {
+    transform: translateX(5px);
+    }
+    30% {
+    transform: translateX(-5px);
+    }
+    50% {
+    transform: translateX(3px);
+    }
+    65% {
+    transform: translateX(-3px);
+    }
+    80% {
+    transform: translateX(2px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

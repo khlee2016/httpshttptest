@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ab {
+        background: orange;
+    }
+</style>
+<div id="content"></div>
+
+<script>
+    window.onload = function () {
+        var content = document.getElementById("content")
+        content.innerHTML = "<button>버튼</button><br><ul></ul>"
+
+        var ul = document.querySelector("ul")
+        var li = document.getElementsByTagName("li")
+        var btn = document.querySelector("button")
+
+        btn.addEventListener("click", function() {
+            ul.innerHTML += "<li>새로운내용</li>"
+            for (i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', active)
+        }
+        })
+
+        for (i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', active)
+        }
+
+
+        function active() {
+            for (i = 0; i < li.length; i++){
+                li[i].removeAttribute('class')
+            } 
+            this.setAttribute('class', 'ab')
+        }
+
+    }
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>

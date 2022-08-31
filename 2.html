@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        mydata = [1,2,3,4,5]
+
+
+        for(i=5;i<Math.floor(Math.random()*100);i++) {
+            mydata[i] = Math.floor(Math.random()*100+1);
+        }
+
+        sum = 0;
+        for(j=0; j < mydata.length; j++) {
+            sum += mydata[j];
+        }
+
+        num = mydata.length;
+        avg = sum / num;
+
+        mydata[num] = mydata.length;
+        mydata[num+1] = sum;
+        mydata[num+2] = avg;
+
+        document.write(alert(mydata.toString()))
+
+
+
+    </script>
+</body>
+</html>

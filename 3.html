@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            a = { name: "Jinsu", age: "21" }
+            b = { name: "Chulsu", age: "20" }
+
+            btn = document.getElementsByTagName("button");
+        
+            btn[0].onclick = function () {
+                btn[0].innerHTML += (Number(a.age) + Number(b.age)) / 2
+                a.age = Number(a.age) + 1
+                b.age = Number(b.age) + 1
+            }
+            btn[1].onclick = function () {
+                btn[1].innerHTML += (Number(a.age) + Number(b.age)) / 2
+                a.age = Number(a.age) + 1
+                b.age = Number(b.age) + 1
+            }
+            btn[2].onclick = function () {
+                btn[2].innerHTML += (Number(a.age) + Number(b.age)) / 2
+                a.age = Number(a.age) + 1
+                b.age = Number(b.age) + 1
+            }
+
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <button>sum</button>
+    <button>sum</button>
+    <button>sum</button>
+
+
+</body>
+
+</html>

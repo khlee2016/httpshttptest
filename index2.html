@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화생활즐기기</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="side-menu">
+            <input type="checkbox" class=" " id="collapsible">
+            <label for="collapsible"><span></span></label>
+
+            <div class="sidebar">
+                <div class="search">
+                    <input type="text" id="search-list" placeholder="Keyword...!">
+                    <input type="button" class=" " id="searchBtn">
+                <label for="searchBtn"></label>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="tab-menu">
+                    <ul id="tab_list">
+                        <li class="tab-cate">카테고리</li>
+                      <li class="tab-radio"> <input type="radio" name="culture" value="전시" id="one" checked /><label for="one">#전시회</label></li>
+                       <li class="tab-radio"><input type="radio" name="culture" value="뮤지컬" id="two" /><label for="two"> #뮤지컬</label></li>
+                     <li class="tab-radio"><input type="radio" name="culture" value="콘서트" id="three"/><label for="three">#콘서트</label></li>
+                     <li class="tab-radio"><input type="radio" name="culture" value="축제" id="four" /><label for="four">#축제</label></li>
+
+                    </ul>
+                </div>
+                <!--한줄 긋기-->
+                <hr>
+                <div class="tab_menu">
+                    <ul class="tab_list">
+                        <li class="tab-cate">진행 / 예정</li>
+                        <li class="tab_check"><input type="radio" name="tab_check" value="ing" id="first" checked /><label for="first">현재 진행</label></li>
+                        <li class="tab_check"><input type="radio" name="tab_check" value="future" id="second"/><label for="second">오픈 예정</label></li>
+                    </ul>
+                </div>
+
+                <button id="list-btn">이동하기</button>
+
+            </div>
+
+
+        </div>
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <h1>Where we go</h1>
+                </a>
+            </div>
+
+           
+
+        </header>
+
+        <p id="num-search"></p>
+        <ul id="menuList">
+                <!-- 목록 들어갈 자리 -->
+            </ul> 
+        </ul>
+
+        <!-- 라이트 박스-->
+        <div id="block"></div> <!-- 라이트 박스 배경 -->
+        <div id="lightbox">
+            <div id="info"></div>
+            <figure>
+
+            </figure>
+
+            <div class="btn-close" onclick="lightbox_close()">X</div>
+        </div><!-- end lightbox -->
+
+
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

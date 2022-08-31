@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+
+     
+
+        var h1 = document.querySelector("h1")
+        
+         num =Math.pow(10,1/3);
+
+        count = 1;
+
+       for(i = 0;;i++) {
+       
+            if( Math.abs(10-Math.pow(num.toFixed(i),3)) <= 0.00000001) {
+                break;
+            }
+            else {
+                
+                count++;
+            }
+        } 
+        
+    h1.innerHTML = "시도횟수: "+count+"<br>세제곱근의 값: "+ num.toFixed(count-1) ;
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+<h1></h1>
+</body>
+</html>

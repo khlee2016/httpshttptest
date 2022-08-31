@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>할일 목록 앱</title>
+	<style>
+		#add-btn{
+			padding: 5px 10px;
+			border: 0;
+			background: #f80; color: white;
+			border-radius: 5px;
+		}
+		ul{ 
+			padding: 0; 
+			list-style-position: inside;
+		}
+		li{
+			border-bottom: 1px solid #999;
+			padding: 5px 0;
+		}
+		.active{ background: #abc; } /* step3: 목록 클릭 스타일 */
+	</style>
+</head>
+<body>
+	
+	<h1>내가 수강한 과목</h1>
+	<table border=1>
+		<tr><th>1-1</th><th>1-2</th></tr>
+		<tr><td>수학</td><td>과학</td></tr>
+		<tr><th>2-1</th><th>2-2</th></tr>
+		<tr><td>체육</td><td>영어</td></tr>
+</table>
+	<h1>내 관심분야</h1>
+		<ul >
+		<li>프로그래밍</li>
+		<li>축구</li>
+		<li>음악</li>
+		<li>영화감상</li>
+	</ul>
+
+	<h1 >프로젝트 주제</h1>
+	<button id="add-btn">목록 추가</button>
+	<ul id='list'>
+		<li>자신의 MBTI찾기</li>
+		<li>지역마다 맛집찾기</li>
+		<li>관심사에 맞는 영화찾기</li>
+		<li>게임만들기</li>
+	</ul>
+
+
+
+	
+
+	<script>
+
+		// 변수 초기화
+		var list = document.getElementById('list');
+		var li = list.getElementsByTagName('li');
+		var addBtn = document.getElementById('add-btn');	// 목록 추가 버튼
+		var listCounter = 1;
+	
+	
+		for(var i = 0; i < li.length; i++){
+			li[i].addEventListener('click', activeItem);
+		}
+	
+		function activeItem(){
+	
+			console.log(this);
+	
+			// step3: 목록 스타일 초기화
+			for(var i = 0; i < li.length; i++){
+				li[i].removeAttribute('class');
+			}
+	
+			// 목록에 클래스 추가
+			this.setAttribute('class', 'active');
+		}
+	
+		// step2: 목록 추가
+		addBtn.addEventListener('click', function(){
+			var txt = prompt('제목 입력');
+			list.innerHTML += '<li>' + txt + '</li>';
+		});
+	
+	
+	
+	</script>	
+
+</body>
+</html>
